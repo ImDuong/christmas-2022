@@ -1,5 +1,6 @@
 # Merry Christmas 
 From Dương with nớppp
 
-Cre: Nam
-
+Credit
+- Nam
+- [ImKennyYip](https://github.com/ImKennyYip/Puzzle-Game)
