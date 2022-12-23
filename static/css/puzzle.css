@@ -7,7 +7,7 @@ body {
 #board {
     width: 400px;
     height: 480px;
-    border: 2px solid rgb(0, 128, 83);
+    border: 1px solid rgb(0, 128, 83);
 
     margin: 0 auto;
     display: flex;
@@ -17,14 +17,14 @@ body {
 #board img {
     width: 78px;
     height: 78px;
-    border: 0.5px solid lightblue;
+    border: 1px solid lightblue;
 }
 
 
 #pieces {
     width: 1200px;
     height: 160px;
-    border: 2px solid purple;
+    border: 1px solid purple;
 
     margin: 0 auto;
     display: flex;
@@ -34,5 +34,5 @@ body {
 #pieces img {
     width: 78px;
     height: 78px;
-    border: 0.5px solid lightblue;
+    border: 1px solid lightblue;
 }
