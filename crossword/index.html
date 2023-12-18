@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Cross word Puzzel</title>
+	<title>Cross word Puzzle</title>
 	<link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
-	<script src='script.js'></script>
+	<!-- <script type="module" src="config.js"></script> -->
+	<script src="script.js"></script>
 </head>
 <body onload="initializeScreen()">
 	<div id="leftBox">
-	<table id="puzzel">
+	<table id="puzzle">
 
 	</table>
 	</div>
@@ -16,7 +17,7 @@
 		<tr><td><input class="butt"  type="submit" value="Clear All" onclick="clearAllClicked()"></td>
 		<td><input class="butt"  type="submit" value="Check" onclick="checkClicked()"></td>
 		<td><input class="butt"  type="submit" value="Solve" onclick="solveClicked()"></td>
-		<td><input class="butt"  type="submit" value="Clue" onclick="clueClicked()"></td></tr>
+		<td><input class="butt"  type="submit" value="Clue" onclick="clueClicked()" id="clueButton"></td></tr>
 	</table>
 	</div>
 	<table id="hintsTable">
