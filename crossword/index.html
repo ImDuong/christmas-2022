@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cross word Puzzle</title>
+	<link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
+	<!-- <script type="module" src="config.js"></script> -->
+	<script src="script.js"></script>
+</head>
+<body onload="initializeScreen()">
+	<div id="leftBox">
+	<table id="puzzle">
+
+	</table>
+	</div>
+	<div id="rightBox">
+	<table>
+		<tr><td><input class="butt"  type="submit" value="Clear All" onclick="clearAllClicked()"></td>
+		<td><input class="butt"  type="submit" value="Check" onclick="checkClicked()"></td>
+		<td><input class="butt"  type="submit" value="Solve" onclick="solveClicked()"></td>
+		<td><input class="butt"  type="submit" value="Clue" onclick="clueClicked()" id="clueButton"></td></tr>
+	</table>
+	</div>
+	<table id="hintsTable">
+			<tr>
+				<td><strong>Horizontal:</strong></td><td><strong>Vertical:</strong></td>
+			</tr>
+			<tr>
+				<td>1. Fruit</td><td>Message</td>
+			</tr>
+			<tr>
+				<td>2. Gem</td><td></td>
+			</tr>
+			<tr>
+				<td>3. Clothes</td><td></td>
+			</tr>
+			<tr>
+				<td>4. Fish</td><td></td>
+	</table>
+
+</body>
+</html>
