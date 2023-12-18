@@ -22,12 +22,12 @@ function initializeScreen(){
 }
 //Adds the hint numbers
 function addHint(){
-    document.getElementById("txt_0_4").placeholder = "1";
-    document.getElementById("txt_2_6").placeholder = "2";
-    document.getElementById("txt_3_1").placeholder = "3";
-    document.getElementById("txt_3_9").placeholder = "4";
-    document.getElementById("txt_6_2").placeholder = "5";
-    document.getElementById("txt_9_0").placeholder = "6";
+    document.getElementById("txt_0_0").placeholder = "1";
+    document.getElementById("txt_1_0").placeholder = "2";
+    document.getElementById("txt_2_0").placeholder = "3";
+    document.getElementById("txt_3_0").placeholder = "4";
+    // document.getElementById("txt_0_0").placeholder = "5";
+    // document.getElementById("txt_9_0").placeholder = "6";
 }
 //Stores ID of the selected cell into currentTextInput
 function textInputFocus(txtID123){
@@ -47,13 +47,79 @@ function preparePuzzelArray(){
 // 				['k', 'a', 's', 'h', 'm', 'i','r', 0, 0, 0],
 // 				[0, 0, 0, 0, 0, 0, 'e', 0, 0, 0]
 // 			];
-var items = [
-    ['l','e','m','o','n'],
-    ['o','p','a','l',0],
-    ['v','e','s','t',0],
-    ['e','e','l',0,0]
-];
-return items;
+    var data = {
+        across: {
+            1: {
+                clue: 'A sour fruit.',
+                answer: 'LEMON',
+                row: 0,
+                col: 0,
+            },
+            2: {
+                clue: 'A type of gemstone.',
+                answer: 'OPAL',
+                row: 1,
+                col: 0,
+            },
+            3: {
+                clue: 'A type of clothing.',
+                answer: 'VEST',
+                row: 2,
+                col: 0,
+            },
+            4: {
+                clue: 'A type of fish.',
+                answer: 'EEL',
+                row: 3,
+                col: 0,
+            },
+        },
+        down: {
+            1: {
+                clue: 'A strong affection.',
+                answer: 'LOVE',
+                row: 0,
+                col: 0,
+            },
+        },
+    };
+
+    var items = [];
+    for (var i = 0; i < 4; i++) {
+        items[i] = [];
+        for (var j = 0; j < 5; j++) {
+            items[i][j] = 0;
+        }
+    }
+
+    for (var key in data.across) {
+        var word = data.across[key];
+        for (var i = 0; i < word.answer.length; i++) {
+            items[word.row][word.col + i] = word.answer[i];
+        }
+    }
+
+    for (var key in data.down) {
+        var word = data.down[key];
+        for (var i = 0; i < word.answer.length; i++) {
+            items[word.row + i][word.col] = word.answer[i];
+        }
+    }
+
+    console.log(items);
+
+
+
+
+
+    // var items = [
+    //     ['l','e','m','o','n'],
+    //     ['o','p','a','l',0],
+    //     ['v','e','s','t',0],
+    //     ['e','e','l',0,0]
+    // ];
+
+    return items;
 }
 //Clear All Button
 function clearAllClicked(){
